@@ -1,15 +1,11 @@
-#
-# filebot Dockerfile
-#
+# FileBot Dockerfile
 # https://github.com/ahobsonsayers/docker-filebot
-#
 
-# Pull base image.
+# Pull base image
 FROM lsiobase/guacgui:latest
 
-# Define software versions.
+# Define filebot version
 ARG FILEBOT_VERSION=4.7.9
-ARG OPENJFX_VERSION=8.151.12-r0
 
 LABEL build_version="FileBot Version: ${FILEBOT_VERSION}"
 LABEL maintainer="Arran Hobson Sayers"
@@ -22,7 +18,6 @@ ENV TZ ${TZ}
 
 # Define software download URLs.
 ARG FILEBOT_URL=https://downloads.sourceforge.net/project/filebot/filebot/FileBot_${FILEBOT_VERSION}/FileBot_${FILEBOT_VERSION}-portable.tar.xz
-ARG CHROMAPRINT_URL=https://github.com/acoustid/chromaprint/archive/v${CHROMAPRINT_VERSION}.tar.gz
 
 # Define working directory.
 WORKDIR /tmp
@@ -53,7 +48,7 @@ RUN \
     apt-get update && \
     apt-get install -qy --no-install-recommends \
     curl gtk+2.0 openjdk-8-jre libjna-java libmediainfo-dev \
-    # Openjfx8
+    # OpenJFX8
     openjfx=8u161-b12-1ubuntu2 libopenjfx-java=8u161-b12-1ubuntu2 libopenjfx-jni=8u161-b12-1ubuntu2 \
     # AcousItD (fpcalc)
     libchromaprint-dev && \
