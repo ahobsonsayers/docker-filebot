@@ -218,4 +218,4 @@ path.
 Having troubles with the container or have questions?  Please
 [create a new issue].
 
-[create a new issue]: https://github.com/arranhs/docker-filebot/issues
+[create a new issue]: https://github.com/ahobsonsayers/docker-filebot/issues
