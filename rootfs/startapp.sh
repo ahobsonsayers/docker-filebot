@@ -10,5 +10,5 @@ s6-svwait -t 10000 -U /var/run/s6/services/guacamole/
 sleep 2 
 
 # Run FileBot
-/opt/filebot/filebot -script fn:sysinfo
+s6-setuidgid abc /opt/filebot/filebot -script fn:sysinfo
 exec s6-setuidgid abc /opt/filebot/filebot-gui
