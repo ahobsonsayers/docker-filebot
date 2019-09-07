@@ -11,4 +11,4 @@ sleep 2
 
 # Run FileBot
 /opt/filebot/filebot -script fn:sysinfo
-exec /opt/filebot/filebot-gui
+exec s6-setuidgid abc /opt/filebot/filebot-gui
