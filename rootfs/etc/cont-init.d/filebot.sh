@@ -6,6 +6,6 @@ set -u # Treat unset variables as an error.
 [ -f /config/prefs.properties ] || cp /defaults/prefs.properties /config/
 
 # Take ownership of the config directory content.
-chown -R $PUID:$PGID /config/*
+chown -R abc:abc /config/*
 
 # vim: set ft=sh :
