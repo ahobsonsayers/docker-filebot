@@ -9,6 +9,6 @@ set -u # Treat unset variables as an error.
 chown -R abc:abc /config/*
 
 # Allow execution of startup scripts
-chown +x /opt/filebot/filebot /opt/filebot/filebot-gui
+chmod +x /opt/filebot/*
 
 # vim: set ft=sh :
