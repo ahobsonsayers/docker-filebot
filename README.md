@@ -1,6 +1,6 @@
 # Docker container for FileBot
 
-This is a Docker container for FileBot.
+This is a Docker container for FileBot. Much of the work came from jlesage's excellent filebot image but this image ustilises Guacamole due to its advantages. 
 
 The GUI of the application is accessed through a modern web browser (no installation or configuration needed on client side) or via any VNC client. 
 
